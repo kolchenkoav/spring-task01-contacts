@@ -1,0 +1,4 @@
+Смирнов Иван Иванович;+79099999111;someEmail2@example.example
+Иванов Иван Иванович;+79099999999;someEmail@example.example
+Голоколенко Иван Иванович;+79884567788;golIvan@gmail.com
+Иванов Олег Иванович;+7(909) 111-88-00;someEmail@example.exa
