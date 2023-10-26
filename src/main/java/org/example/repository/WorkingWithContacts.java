@@ -27,7 +27,7 @@ public class WorkingWithContacts implements WorkingWithContactsInterface {
     public List<Contacts> getFromFile(String fileName) {
         int qLines = 0;
         int qLinesError = 0;
-        List<Contacts> contactsList= new ArrayList<>();
+        List<Contacts> contactsList = new ArrayList<>();
         Path path = null;
         try {
             path = Paths.get(getClass().getClassLoader()
@@ -43,7 +43,7 @@ public class WorkingWithContacts implements WorkingWithContactsInterface {
             e.printStackTrace();
         }
 
-        for (String line: lines.toList()) {
+        for (String line : lines.toList()) {
             Contacts contacts = parseLine(line);
             if (contacts != null) {
                 contactsList.add(contacts);
@@ -66,7 +66,7 @@ public class WorkingWithContacts implements WorkingWithContactsInterface {
     @Override
     public Contacts parseLine(String line) {
         Pattern pattern = Pattern.compile(";");
-        String[] strings = pattern.split(line,3);
+        String[] strings = pattern.split(line, 3);
         if (strings.length != 3) {
             log.warning("Строка не содержит необходимые данные");
             return null;
@@ -117,7 +117,7 @@ public class WorkingWithContacts implements WorkingWithContactsInterface {
             return;
         }
         Path path = Paths.get(saveFileName);
-        listOfContacts.forEach((k, contacts)-> {
+        listOfContacts.forEach((k, contacts) -> {
             stringBuilder.append(contacts).append("\n");
         });
 
@@ -150,7 +150,7 @@ public class WorkingWithContacts implements WorkingWithContactsInterface {
     public void DeleteContact(String email) {
         var result = listOfContacts.remove(email);
         if (result != null) {
-            log.info(setGreenMsg("Контакт "+result.toString()+" удалён"));
+            log.info(setGreenMsg("Контакт " + result.toString() + " удалён"));
         } else {
             log.warning(email + " не найден в списке");
         }

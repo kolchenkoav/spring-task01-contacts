@@ -15,7 +15,7 @@ public class AddCommand implements Consumer<String> {
     }
 
     @Override
-    public void accept(String  command) {
+    public void accept(String command) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nВведите контакт например: Иванов Иван Иванович; +7(909) 999-99-00; someEmail@example.example\n:");
         String line = scanner.nextLine();

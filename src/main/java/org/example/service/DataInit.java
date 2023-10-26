@@ -22,9 +22,10 @@ public class DataInit {
     private String saveFileName;
 
     public static final Consumer<String> InvalidCommandAction =
-            (command-> System.out.println("Неправильная команда. Введите help or ?"));
+            (command -> System.out.println("Неправильная команда. Введите help or ?"));
 
     private final WorkingWithContactsInterface working;
+
     public DataInit(WorkingWithContactsInterface working) {
         this.working = working;
     }
